@@ -61,11 +61,11 @@ a:hover {
 
 .logo {
   font-size: 2rem;
-  color:white;
+  color: white;
 }
 
 .logo:hover {
-  cursor: default;  
+  cursor: default;
 }
 
 /* HAMBURGER MENU */
@@ -209,20 +209,18 @@ section {
   align-items: center;
 }
 
-
 /* ICONS */
 
 .icon {
   cursor: pointer;
-  height: 2rem;
+  height: 2.5rem;
   color: black;
 }
 
 .email-icon {
-  height: 2.5rem;
   align-items: center;
   cursor: pointer;
-  
+  gap: 0.5rem;
 }
 
 /* BUTTONS */
@@ -285,18 +283,15 @@ section {
   margin-top: 2rem;
 }
 
-
 .about-details-container {
   justify-content: center;
   flex-direction: column;
 }
 
-
 .about-containers,
 .about-details-container {
   display: flex;
 }
-
 
 .about-pic {
   border-radius: 2rem;
@@ -326,6 +321,7 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  position: relative;
 }
 
 /* EXPERIENCE SECTION */
@@ -347,9 +343,6 @@ section {
   flex-direction: column;
 }
 
-
-
-
 .article-container {
   display: flex;
   text-align: initial;
@@ -358,7 +351,6 @@ section {
   gap: 2.5rem;
   justify-content: space-around;
 }
-
 
 article {
   display: flex;
@@ -421,35 +413,34 @@ article .icon {
   background: (0, 0, 0);
   margin: 2rem auto;
   padding: 0.5rem;
-
 }
 .contact-info-container {
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
   margin: 1rem;
   padding: 0.5rem;
-  border-color: black;
   border-radius: 2rem;
-
 }
-
 
 .contact-info-container p {
   font-size: larger;
 }
 
 .contact-icon {
+  height: 2.5rem;
   cursor: pointer;
 }
 
 .email-icon {
-  height: 2.5rem;
-  align-items: center;
+  height: 3rem;
   cursor: pointer;
-  
+}
+
+.phone-icon {
+  height: 3rem;
+  cursor: pointer;
 }
 
 /* FOOTER SECTION */
@@ -463,5 +454,3 @@ footer {
 footer p {
   text-align: center;
 }
-
-

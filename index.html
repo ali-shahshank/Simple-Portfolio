@@ -60,18 +60,18 @@
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="location.href='https://linkedin.com/'"
+            onclick="openNewWindow('https://linkedin.com/')"
           />
           <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/'"
+            onclick="openNewWindow('https://github.com/ali-shahshank')"
           />
           <img
             src="./assets/email.png"
-            alt="email icon"
-            class="email-icon"
+            alt="socials-email-icon"
+            class="icon email-icon"
             onclick="location.href='mailto:sploitify@gmail.com'"
           />
         </div>
@@ -348,29 +348,88 @@
         onclick="location.href='./#contact'"
       />
     </section>
+
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
-            src="./assets/email.png"
-            alt="email icon"
-            class="email-icon"
-            onclick="location.href='mailto:sploitify@gmail.com'"
-          />
-        </div>
-        <div class="contact-info-container">
-          <img
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="location.href='https://linkedin.com/'"
+            onclick="openNewWindow('https://linkedin.com/')"
           />
-          <p><a href="https://www.linkedin.com/"></a></p>
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="openNewWindow('https://github.com/ali-shahshank')"
+          />
+          <img
+            src="./assets/email.png"
+            alt="socials-email-icon"
+            class="icon email-icon"
+            onclick="location.href='mailto:sploitify@gmail.com'"
+          />
+          <img
+            src="./assets/phone.png"
+            alt="phone-icon"
+            class="icon phone-icon"
+            id="phone-icon"
+            onclick="togglePhoneNumber(event)"
+            title="Click to reveal phone number"
+          />
+        </div>
+        <div id="phone-tooltip" class="tooltip">
+          <span id="phone-number"></span>
         </div>
       </div>
+      <!-- Function for toggling the phone number tooltip -->
+      <script>
+        let isPhoneNumberVisible = false;
+
+        function openNewWindow(url) {
+          window.open(url, "_blank");
+        }
+
+        function togglePhoneNumber(event) {
+          const phoneNumber = "+1(571)329-2436"; // Replace with your actual phone number
+          const phoneTooltip = document.getElementById("phone-tooltip");
+          const phoneNumberSpan = document.getElementById("phone-number");
+
+          if (isPhoneNumberVisible) {
+            // If phone number is visible, hide the tooltip
+            phoneTooltip.style.display = "none";
+          } else {
+            // If phone number is not visible, show the tooltip
+            phoneNumberSpan.innerText = `Phone Number: ${phoneNumber}`;
+            phoneTooltip.style.display = "block";
+
+            // Calculate tooltip position
+            const iconRect = event.target.getBoundingClientRect();
+            phoneTooltip.style.top = `${iconRect.bottom}px`;
+            phoneTooltip.style.left = `${iconRect.left}px`;
+          }
+
+          // Toggle the visibility flag
+          isPhoneNumberVisible = !isPhoneNumberVisible;
+        }
+
+        // Close the tooltip when clicking anywhere else on the page
+        document.addEventListener("click", function (event) {
+          const phoneTooltip = document.getElementById("phone-tooltip");
+          if (
+            event.target !== document.getElementById("phone-icon") &&
+            event.target !== phoneTooltip
+          ) {
+            phoneTooltip.style.display = "none";
+            isPhoneNumberVisible = false;
+          }
+        });
+      </script>
     </section>
+
     <footer>
       <nav>
         <div class="nav-links-container">
