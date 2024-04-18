@@ -55,14 +55,14 @@ a {
 }
 
 a::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
   width: 0;
   height: 2px;
   background-color: white;
-  transition: width 0.5s ease, left 0.4s ease;
+  transition: 0.5s ease, left 0.4s ease;
 }
 
 a:hover::before {
@@ -98,7 +98,7 @@ a:hover::before {
   width: 30px;
   cursor: pointer;
   z-index: 2;
-    /* Ensure the hamburger icon is above other elements */
+  /* Ensure the hamburger icon is above other elements */
 }
 
 .hamburger-icon span {
@@ -122,7 +122,7 @@ a:hover::before {
   transition: all 0.4s ease-in-out;
   /* Smoother transition */
   z-index: 1;
-    /* Ensure the menu links are below other elements */
+  /* Ensure the menu links are below other elements */
 }
 
 .menu-links a {
@@ -170,8 +170,6 @@ a:hover::before {
   transform: none;
   opacity: 1;
 }
-
-/* ... (rest of your existing styles) ... */
 
 .hamburger-icon.open span:nth-child(2) {
   opacity: 0;
@@ -333,7 +331,6 @@ section {
 .about-details-container {
   justify-content: center;
   flex-direction: column;
-
 }
 
 .about-containers,
@@ -360,7 +357,7 @@ section {
   text-align: center;
   background-color: rgb(222, 222, 222);
   transition: box-shadow 0.3s ease;
-    /* Add transition for smooth effect */
+  /* Add transition for smooth effect */
 }
 
 .details-container:hover {
@@ -383,7 +380,7 @@ section {
 /* EXPERIENCE SECTION */
 
 #experience {
-  position: relative;  
+  position: relative;
 }
 
 .experience-sub-title {

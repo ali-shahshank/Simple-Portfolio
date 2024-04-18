@@ -3,16 +3,16 @@ function toggleMenu() {
     const icon = document.querySelector(".hamburger-icon");
 
     if (!menu.classList.contains("open")) {
-        // Menu is closed, open it and add event listeners
+        // Menu is closed, open it and add event listeners.
         menu.classList.add("open");
         icon.classList.add("open");
 
-        // Add event listener to close menu when not hovering over it
+        // Add event listener to close menu when not hovering over it.
         menu.addEventListener("mouseout", closeMenuOnMouseOut);
-        // Add event listener to close menu when not hovering over the icon
+        // Add event listener to close menu when not hovering over the icon.
         icon.addEventListener("mouseout", closeMenuOnMouseOut);
     } else {
-        // Menu is open, close it and remove event listeners
+        // Menu is open, close it and remove event listeners.
         menu.classList.remove("open");
         icon.classList.remove("open");
 
@@ -25,14 +25,14 @@ function closeMenuOnMouseOut(event) {
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
 
-    // Check if the mouse is not over the menu or the icon
+    // Check if the mouse is not over the menu or the icon.
     if (!menu.contains(event.relatedTarget) && !icon.contains(event.relatedTarget)) {
         menu.classList.remove("open");
         icon.classList.remove("open");
     }
 }
 
-// This is the new Java Function for the PHONE-ICON to display the phone number upon click 
+// This is the new Java Function for the PHONE-ICON to display the phone number upon click.
 
         let isPhoneNumberVisible = false;
 
@@ -41,7 +41,7 @@ function closeMenuOnMouseOut(event) {
         }
 
         function togglePhoneNumber(event) {
-          const phoneNumber = "+1(571)329-2436"; // Replace with your actual phone number
+          const phoneNumber = "+1(571)329-2436"; // Replace with your actual phone number.
           const phoneTooltip = document.getElementById("phone-tooltip");
           const phoneNumberSpan = document.getElementById("phone-number");
 
